@@ -37,6 +37,13 @@ pipeline {
             }
         }
 
+        stage('install dependances') {
+            steps {
+                sh """
+                    npm install
+                """
+            }
+
         stage('Test') {
             steps {
                 echo 'Testing..'
